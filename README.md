@@ -25,13 +25,13 @@
 - 安装项目相关依赖
   > pip install -r requirements.txt
 - 启动*scrapy worker*，包括代理IP采集器和校验器
-  > python crawler_booter.py --usage crawler
+  > nohup python3 crawler_booter.py --usage crawler &
 
-  > python crawler_booter.py --usage validator
+  > nohup python3 crawler_booter.py --usage validator &
 - 启动*调度器*，包括代理IP定时调度和校验
-  > python scheduler_booter.py --usage crawler
+  > nohup python3 scheduler_booter.py --usage crawler &
 
-  > python scheduler_booter.py --usage validator
+  > nohup python3 scheduler_booter.py --usage validator &
 
 ### 客户端
 近日不断有同学问，如何获取该项目中可用的代理IP列表。`haipproxy`提供代理的方式并不是通过`web api`来提供，而是通过具体的客户端来提供。
